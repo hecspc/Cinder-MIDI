@@ -264,9 +264,11 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateExpansionKey</key>
 							<array>
 								<string>29B97314FDCFA39411CA2CEA</string>
+								<string>29B97315FDCFA39411CA2CEA</string>
 								<string>080E96DDFE201D6D7F000001</string>
 								<string>8F766A4211B7B47300BBA954</string>
 								<string>8F766A4511B7B48900BBA954</string>
+								<string>8F766A4611B7B48900BBA954</string>
 								<string>29B97323FDCFA39411CA2CEA</string>
 								<string>1058C7A2FEA54F0111CA2CBB</string>
 								<string>1C37FABC05509CD000000102</string>
@@ -274,6 +276,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
+									<integer>4</integer>
+									<integer>3</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -327,10 +331,15 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>8F766AFA11B7B88600BBA954</string>
+										<string>8F23A0D611C3BB9100C61550</string>
 										<key>history</key>
 										<array>
-											<string>8F766AF611B7B87F00BBA954</string>
+											<string>8F23A0D011C3BB9100C61550</string>
+											<string>8F23A0D111C3BB9100C61550</string>
+											<string>8F23A0D211C3BB9100C61550</string>
+											<string>8F23A0D311C3BB9100C61550</string>
+											<string>8F23A0D411C3BB9100C61550</string>
+											<string>8F23A0D511C3BB9100C61550</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -342,14 +351,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {949, 573}}</string>
+								<string>{{0, 0}, {949, 568}}</string>
 								<key>RubberWindowFrame</key>
 								<string>177 64 1157 800 0 0 1680 1028 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>573pt</string>
+							<string>568pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -362,14 +371,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 578}, {949, 181}}</string>
+								<string>{{0, 573}, {949, 186}}</string>
 								<key>RubberWindowFrame</key>
 								<string>177 64 1157 800 0 0 1680 1028 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
 							<key>Proportion</key>
-							<string>181pt</string>
+							<string>186pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
@@ -388,9 +397,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>8F766AD811B7B6A800BBA954</string>
+				<string>8F23A0CD11C3B95000C61550</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>8F766AD911B7B6A800BBA954</string>
+				<string>8F23A0CE11C3B95000C61550</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -528,10 +537,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>8F766AE511B7B6A800BBA954</string>
-		<string>8F766AE611B7B6A800BBA954</string>
-		<string>1CD10A99069EF8BA00B06720</string>
-		<string>1C78EAAD065D492600B07095</string>
 		<string>8F766ADB11B7B6A800BBA954</string>
 		<string>/Work/libraries/c/Cinder-MIDI/samples/MidiExample/xcode/MidiExample.xcodeproj</string>
 	</array>
@@ -557,7 +562,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>MidiExampleApp.cpp</string>
+								<string></string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -574,8 +579,6 @@
 							<string>218pt</string>
 						</dict>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -615,7 +618,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>8F766ADB11B7B6A800BBA954</string>
-				<string>8F766ADC11B7B6A800BBA954</string>
+				<string>8F23A0CF11C3B95000C61550</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
@@ -628,7 +631,7 @@
 			<key>WindowToolGUID</key>
 			<string>8F766ADB11B7B6A800BBA954</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>
