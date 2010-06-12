@@ -1,0 +1,136 @@
+// !$*UTF8*$!
+{
+	00BAE6590E7ED9C10018A608 /* MidiExampleApp.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {888, 1001}}";
+			sepNavSelRange = "{336, 0}";
+			sepNavVisRange = "{0, 813}";
+		};
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = 8F766A2111B7B46D00BBA954 /* MidiExample */;
+		activeTarget = 8D1107260486CEB800E47090 /* MidiExample */;
+		addToTargets = (
+			8D1107260486CEB800E47090 /* MidiExample */,
+		);
+		codeSenseManager = 8F766A4411B7B47300BBA954 /* Code sense */;
+		executables = (
+			8F766A2111B7B46D00BBA954 /* MidiExample */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					710,
+					20,
+					48.16259765625,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 297251949;
+			PBXWorkspaceStateSaveDate = 297251949;
+		};
+		perUserProjectItems = {
+			8F766AF611B7B87F00BBA954 /* XCBuildMessageTextBookmark */ = 8F766AF611B7B87F00BBA954 /* XCBuildMessageTextBookmark */;
+			8F766AFA11B7B88600BBA954 /* PBXTextBookmark */ = 8F766AFA11B7B88600BBA954 /* PBXTextBookmark */;
+		};
+		sourceControlManager = 8F766A4311B7B47300BBA954 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	8D1107260486CEB800E47090 /* MidiExample */ = {
+		activeExec = 0;
+		executables = (
+			8F766A2111B7B46D00BBA954 /* MidiExample */,
+		);
+	};
+	8F766A2111B7B46D00BBA954 /* MidiExample */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = MidiExample;
+		savedGlobals = {
+		};
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	8F766A4311B7B47300BBA954 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	8F766A4411B7B47300BBA954 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	8F766AF611B7B87F00BBA954 /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "Expected `)' before ';' token";
+		fRef = 8F766AF711B7B87F00BBA954 /* MidiExampleApp.cpp */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 65;
+		rType = 1;
+	};
+	8F766AF711B7B87F00BBA954 /* MidiExampleApp.cpp */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.cpp.cpp;
+		name = MidiExampleApp.cpp;
+		path = "/Work/libraries/c/Cinder-MIDI/samples/MidiExample/xcode/../src/MidiExampleApp.cpp";
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {888, 1001}}";
+			sepNavSelRange = "{336, 0}";
+			sepNavVisRange = "{0, 813}";
+		};
+	};
+	8F766AFA11B7B88600BBA954 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 00BAE6590E7ED9C10018A608 /* MidiExampleApp.cpp */;
+		name = "MidiExampleApp.cpp: 18";
+		rLen = 0;
+		rLoc = 336;
+		rType = 0;
+		vrLen = 813;
+		vrLoc = 0;
+	};
+}
