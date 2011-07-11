@@ -42,6 +42,7 @@ namespace cinder { namespace midi {
 		}
 		
 		mPort = port;
+		mName = mMidiIn.getPortName(port);
 		
 		mMidiIn.openPort(mPort);
 		

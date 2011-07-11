@@ -24,60 +24,46 @@
  POSSIBILITY OF SUCH DAMAGE.
  */
 
+/*
+ *	midi::Hub.h
+ *	By Roger Sodre
+ *
+ *	Connects to ALL midi devices
+ */
 
 #pragma once
 
-#include <vector>
-#include <deque>
-#include <string>
-#include <iostream>
-
-#include "RtMidi.h"
-
-#include "MidiExceptions.h"
+#include "MidiIn.h"
+//#include "MidiOut.h"
 #include "MidiMessage.h"
 #include "MidiConstants.h"
 
-//#include <boost/signal.hpp>
-
-
-namespace cinder { namespace midi {
-
-void MidiInCallback( double deltatime, std::vector< unsigned char > *message, void *userData );
-
-class Input {
-public:
-	Input();
-	virtual ~Input();
+namespace cinder { namespace midi {	
 	
-	void listPorts();
-	unsigned int getNumPorts()const{ return mNumPorts; }
-	void openPort(unsigned int port = 0);
-	void closePort();
-	void processMessage(double deltatime, std::vector<unsigned char> *message);
-	unsigned int getPort()const;
-	
-	bool hasWaitingMessages();
-	bool getNextMessage(Message*);
-	
-	std::vector<std::string> mPortNames;
-	
-	//typedef boost::signal<void (Message*)> signal_t;
+	class Hub {
+	public:
+		Hub();
+		~Hub();
 		
-	//signal_t mSignal;
+		void	disconnectAll();
+		void	connectAll();
+		void	update();
+		
+		int		getConnectedDeviceCount()	{ return midiInPool.size(); };
+		bool	isConnected()				{ return (midiInPool.size() > 0 ? true : false); };
+		bool	isDeviceConnected( std::string _name );
+		
+		bool	hasWaitingMessages();
+		bool	getNextMessage( Message *msg );
+		
+	protected:
+		
+		RtMidiIn	midii;
+		
+		std::vector<midi::Input*>	midiInPool;
+		//vector<midi::Output*>		midiOutPool;
+	};
 	
-	std::string getName()	{ return mName; };
-
-protected:
 	
-	RtMidiIn mMidiIn;
-	unsigned int mNumPorts;
-	unsigned int mPort;
-	std::string mName;
-	std::deque<Message*> mMessages;
-
-
-};
-
 } // namespace midi
 } // namespace cinder
