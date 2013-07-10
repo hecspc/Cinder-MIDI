@@ -8,19 +8,11 @@
  *
  */
 
-
 #pragma once
 
 #include "RtMidi.h"
-//
-//#include "MidiExceptions.h"
-//#include "MidiMessage.h"
-//#include "MidiConstants.h"
-
 
 namespace cinder { namespace midi {
-
-//void MidiInCallback( double deltatime, std::vector< unsigned char > *message, void *userData );
 
 class Output {
 
