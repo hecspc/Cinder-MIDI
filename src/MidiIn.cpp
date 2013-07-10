@@ -9,6 +9,7 @@
 
 #include "MidiIn.h"
 
+
 namespace cinder { namespace midi {
 
 	void MidiInCallback(double deltatime, std::vector<unsigned char> *message, void *userData){
@@ -16,30 +17,37 @@ namespace cinder { namespace midi {
 	}
 	
 	
-	Input::Input(){
-		mNumPorts = mMidiIn.getPortCount();
+	Input::Input()
+    {
+        listPorts();
 	}
 	
 	Input::~Input(){
 		closePort();
 	}
 	
-	void Input::listPorts(){
-		std::cout << "MidiIn: " << mNumPorts << " available." << std::endl;
-		for (size_t i = 0; i < mNumPorts; ++i){
+	void Input::listPorts()
+    {
+        mPortNames.clear();
+        
+        int portsN = mMidiIn.getPortCount();
+		
+        std::cout << "MidiIn: " << portsN << " available." << std::endl;
+		
+        for (size_t i = 0; i < portsN; ++i)
+        {
 			std::cout << i << ": " << mMidiIn.getPortName(i).c_str() << std::endl;
-			mPortNames.push_back(mMidiIn.getPortName(i));
+			mPortNames.push_back( mMidiIn.getPortName(i) );
 		}
 	}
 	
-	void Input::openPort(unsigned int port){
-		if (mNumPorts == 0){
+	void Input::openPort(unsigned int port)
+    {
+		if ( getNumPorts() == 0 )
 			throw MidiExcNoPortsAvailable();
-		}
 		
-		if (port + 1 > mNumPorts){
+		if ( port + 1 > getNumPorts() )
 			throw MidiExcPortNotAvailable();
-		}
 		
 		mPort = port;
 		mName = mMidiIn.getPortName(port);

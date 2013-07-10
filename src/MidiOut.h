@@ -1,0 +1,121 @@
+/*
+ *  MidiOut.h
+ *
+ *  Created by Andrea Cuius
+ *  Nocte Studio Ltd. Copyright 2013 . All rights reserved.
+ *
+ *  www.nocte.co.uk
+ *
+ */
+
+
+#pragma once
+
+#include "RtMidi.h"
+//
+//#include "MidiExceptions.h"
+//#include "MidiMessage.h"
+//#include "MidiConstants.h"
+
+
+namespace cinder { namespace midi {
+
+//void MidiInCallback( double deltatime, std::vector< unsigned char > *message, void *userData );
+
+class Output {
+
+public:
+    
+	Output()                { listPorts(); }
+    
+    ~Output()               { closePort(); }
+	
+	void closePort()        { mMidiOut.closePort(); }
+    
+	size_t getNumPorts()    { return mPortNames.size(); }
+    
+	void listPorts()
+    {
+        mPortNames.clear();
+        
+        int portsN = mMidiOut.getPortCount();
+		
+        std::cout << "MidiOut: " << portsN << " available." << std::endl;
+		
+        for (size_t i = 0; i < portsN; ++i)
+        {
+			std::cout << i << ": " << mMidiOut.getPortName(i).c_str() << std::endl;
+			mPortNames.push_back( mMidiOut.getPortName(i) );
+		}
+	}
+    
+	
+    void openPort( size_t port = 0 )
+    {
+        if ( getNumPorts() == 0 )
+            throw MidiExcNoPortsAvailable();
+            
+        if ( port + 1 > getNumPorts() )
+            throw MidiExcPortNotAvailable();
+    
+        mPort = port;
+        mName = mMidiOut.getPortName(port);
+        
+        mMidiOut.openPort( mPort );
+    }
+    
+//    // channel info
+//#define    MIDI_NOTE_OFF             128
+//#define    MIDI_NOTE_ON              144
+//#define    MIDI_POLY_PRESSURE        160
+//#define    MIDI_CONTROL_CHANGE       176
+//#define    MIDI_PROGRAM_CHANGE       192
+//#define    MIDI_CHANNEL_PRESSURE     208
+//#define    MIDI_PITCH_BEND           224
+//    
+//    // system exclusive
+//#define    MIDI_NOTE_ON              144
+//    
+//    // system common
+//#define    MIDI_TIME_CODE            241
+//#define    MIDI_SONG_POS_POINTER     242
+//#define    MIDI_SONG_SELECT          243
+//#define    MIDI_TUNE_REQUEST         244
+//#define    MIDI_EOX                  247
+//    
+//    // system realtime
+//#define    MIDI_TIME_CLOCK           248
+//#define    MIDI_START                250
+//#define    MIDI_CONTINUE             251
+//#define    MIDI_STOP                 252
+//#define    MIDI_ACTIVE_SENSING       254
+//#define    MIDI_SYSTEM_RESET         255
+    
+    void sendMessage( size_t channel, size_t type, size_t val_a, size_t val_b )
+    {
+        std::vector<unsigned char> rtMsg;
+        type = type | channel;
+        rtMsg.push_back( type );
+        rtMsg.push_back( val_a );
+        rtMsg.push_back( val_b );
+        mMidiOut.sendMessage( &rtMsg );
+    }
+    
+	std::string getName()   { return mName; };
+    
+    std::vector<std::string> getPortNames() { return mPortNames; }
+
+    
+protected:
+	
+	RtMidiOut                   mMidiOut;
+	uint32_t                    mPort;
+    std::vector<std::string>    mPortNames;
+	std::string                 mName;
+
+};
+
+} // namespace midi
+} // namespace cinder
+
+
